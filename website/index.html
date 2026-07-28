@@ -84,6 +84,7 @@
       background: var(--teal);
       padding: 8px 20px;
       border-radius: 4px;
+      white-space: nowrap;
       transition: background 0.2s !important;
     }
 
@@ -537,7 +538,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
-      .nav-links { gap: 20px; }
+      .nav-links li.nav-text-link { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 48px 32px 32px; order: 2; }
       .hero-right {
@@ -564,9 +565,9 @@
   <nav>
     <span class="nav-name">John Kilpatrick</span>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="nav-text-link"><a href="#services">Services</a></li>
+      <li class="nav-text-link"><a href="#about">About</a></li>
+      <li class="nav-text-link"><a href="#contact">Contact</a></li>
       <li><a class="nav-cta" href="#contact">Get in touch</a></li>
     </ul>
   </nav>
@@ -598,11 +599,11 @@
         </div>
         <div class="hero-stat">
           <span class="hero-stat-label">Based in</span>
-          <span class="hero-stat-value">Surrey</span>
+          <span class="hero-stat-value">Surrey, London</span>
         </div>
         <div class="hero-stat">
           <span class="hero-stat-label">Experience</span>
-          <span class="hero-stat-value">4 years</span>
+          <span class="hero-stat-value">NHS, Startups, Enterprise Products</span>
         </div>
       </div>
     </div>
@@ -726,10 +727,7 @@
         </div>
       </div>
       <div class="contact-form-area">
-        <!-- !! IMPORTANT: Replace YOUR_FORM_ID below with your Formspree form ID !! -->
-        <!-- Sign up free at formspree.io, create a form, and paste the ID here     -->
         <form action="https://formspree.io/f/mkoygoae" method="POST">
-
           <label class="form-label" for="name">Your name</label>
           <input class="form-input" type="text" id="name" name="name" placeholder="Dr Jane Smith" required />
 
