@@ -211,6 +211,10 @@
       display: block;
     }
 
+    .hero-portrait-mobile {
+      display: none;
+    }
+
     .hero-card {
       background: var(--warm-white);
       border: 1px solid var(--border);
@@ -542,19 +546,21 @@
       nav { padding: 0 24px; }
       .nav-links li.nav-text-link { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 48px 32px 32px; order: 2; }
-      .hero-right {
+      .hero-left { padding: 32px 32px 32px; }
+      .hero-right { display: none; }
+      .hero-portrait { display: none; }
+      .hero-portrait-mobile {
+        display: block;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        box-shadow: 0 8px 24px -8px rgba(11,31,58,0.25);
+        margin: 40px auto 0;
         order: 1;
-        height: auto;
-        padding: 40px 32px 8px;
-        background: transparent;
-        border-left: none;
-        gap: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
-      .hero-portrait { width: 180px; height: 180px; max-width: none; aspect-ratio: 1 / 1; object-fit: cover; }
+      .hero-left { order: 2; }
       .hero-card { display: none; }
       section { padding: 60px 32px; }
       .services-grid { grid-template-columns: 1fr; }
@@ -580,6 +586,7 @@
 
   <!-- HERO -->
   <div class="hero">
+    <img class="hero-portrait-mobile" src="/images/john-kilpatrick.png" alt="Portrait of John Kilpatrick" />
     <div class="hero-left">
       <span class="hero-badge">Clinical Safety Officer · DCB0129 · DCB0160</span>
       <h1 class="hero-heading">Digital health,<br /><em>safe by design.</em></h1>
