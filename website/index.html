@@ -568,6 +568,98 @@
       .service-card:last-child { border-bottom: none; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 32px; }
+      .work-129-grid { grid-template-columns: 1fr; }
+      .work-160-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── WORK ── */
+    .work-129-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 56px;
+    }
+
+    .work-129-card {
+      background: var(--warm-white);
+      padding: 36px 32px;
+      border-right: 1px solid var(--border);
+    }
+
+    .work-129-card:last-child { border-right: none; }
+
+    .work-standard {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-light);
+      border: 1px solid rgba(29,122,107,0.2);
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    .work-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .work-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+
+    .work-160-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .work-160-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .work-160-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 18px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .work-160-card:hover {
+      border-color: var(--teal);
+      background: var(--teal-light);
+    }
+
+    .work-160-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .work-160-sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -578,6 +670,7 @@
     <span class="nav-name">John Kilpatrick</span>
     <ul class="nav-links">
       <li class="nav-text-link"><a href="#services">Services</a></li>
+      <li class="nav-text-link"><a href="#work">Work</a></li>
       <li class="nav-text-link"><a href="#about">About</a></li>
       <li class="nav-text-link"><a href="#contact">Contact</a></li>
       <li><a class="nav-cta" href="#contact">Get in touch</a></li>
@@ -586,7 +679,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img class="hero-portrait-mobile" src="/images/john-kilpatrick.png" alt="Portrait of John Kilpatrick" />
+    <img class="hero-portrait-mobile" src="/images/john-kilpatrick.jpg" alt="Portrait of John Kilpatrick" />
     <div class="hero-left">
       <span class="hero-badge">Clinical Safety Officer · DCB0129 · DCB0160</span>
       <h1 class="hero-heading">Digital health,<br /><em>safe by design.</em></h1>
@@ -674,6 +767,60 @@
     </div>
   </section>
 
+  <!-- WORK -->
+  <section id="work">
+    <p class="section-eyebrow">Selected work</p>
+    <h2 class="section-heading">Projects &amp; experience</h2>
+    <p class="section-intro">
+      A selection of clinical safety work across NHS and health tech settings — spanning AI, medical devices, and primary care transformation.
+    </p>
+
+    <!-- DCB0129 featured projects -->
+    <div class="work-129-grid">
+
+      <div class="work-129-card">
+        <span class="work-standard">DCB0129</span>
+        <h3 class="work-title">AI patient-facing chatbot</h3>
+        <p class="work-desc">Clinical safety case for an AI chatbot deployed in an endoscopy pathway, handling patient communication and pre/post-procedure information provision. Included hazard identification around AI-generated clinical content and patient misinterpretation risks.</p>
+        <div class="service-tags" style="margin-top:16px">
+          <span class="tag">AI</span>
+          <span class="tag">Patient-facing</span>
+          <span class="tag">Endoscopy</span>
+          <span class="tag">Secondary care</span>
+        </div>
+      </div>
+
+      <div class="work-129-card">
+        <span class="work-standard">DCB0129</span>
+        <h3 class="work-title">Medical device middleware</h3>
+        <p class="work-desc">Clinical safety case for middleware connecting a patient monitoring device to an EPR system, covering data integrity hazards, connectivity failure modes, and clinical workflow risks arising from automated data transfer into the patient record.</p>
+        <div class="service-tags" style="margin-top:16px">
+          <span class="tag">Medical device</span>
+          <span class="tag">EPR integration</span>
+          <span class="tag">Middleware</span>
+          <span class="tag">Secondary care</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DCB0160 grouped -->
+    <p class="work-160-label">DCB0160 — health IT manufacturer safety cases</p>
+    <div class="work-129-card" style="border: 1px solid var(--border); border-radius: 8px;">
+      <p class="work-desc" style="margin-bottom: 24px;">
+        Extensive DCB0160 safety case work undertaken on behalf of ICBs, GP federations, and individual practices. This covered a range of primary care digital health products across the following areas:
+      </p>
+      <div class="service-tags">
+        <span class="tag">AI scribe</span>
+        <span class="tag">Digital front door</span>
+        <span class="tag">Document management</span>
+        <span class="tag">AI receptionist</span>
+        <span class="tag">Chronic disease management</span>
+        <span class="tag">Robotic process automation</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about">
     <p class="section-eyebrow">About me</p>
@@ -731,7 +878,7 @@
           </div>
           <div class="contact-row">
             <span class="contact-key">LinkedIn</span>
-            <span class="contact-val"><a href="https://www.linkedin.com/in/john-kilpatrick-gp-cso/" target="_blank">linkedin.com/in/john-kilpatrick-834ab0222</a></span>
+            <span class="contact-val"><a href="https://www.linkedin.com/in/john-kilpatrick-gp-cso/" target="_blank">linkedin.com/in/john-kilpatrick-gp-cso/</a></span>
           </div>
           <div class="contact-row">
             <span class="contact-key">Location</span>
@@ -745,7 +892,7 @@
           <input class="form-input" type="text" id="name" name="name" placeholder="Dr Jane Smith" required />
 
           <label class="form-label" for="email">Email address</label>
-          <input class="form-input" type="email" id="email" name="email" placeholder="jane@organisation.nhs.uk" required />
+          <input class="form-input" type="email" id="email" name="email" placeholder="jane@organisation.co.uk" required />
 
           <label class="form-label" for="org">Organisation</label>
           <input class="form-input" type="text" id="org" name="organisation" placeholder="NHS Trust / company name" />
