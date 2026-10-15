@@ -639,14 +639,37 @@ a:focus-visible, button:focus-visible, .form-input:focus-visible, .form-textarea
 
 .service-link {
   margin-top: auto;
-  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 15px 18px;
+  font-size: 15px;
   font-weight: 500;
+  line-height: 1.35;
   color: var(--amber);
+  background: var(--amber-dim);
+  border: 1px solid var(--amber-border);
+  border-radius: 3px;
   text-decoration: none;
-  width: fit-content;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.service-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.service-link::after {
+  content: '→';
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.service-link:hover {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg);
+}
+
+.service-link:hover::after { transform: translateX(4px); }
 
 .services-note {
   margin-top: 28px;
